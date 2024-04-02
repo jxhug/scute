@@ -27,8 +27,8 @@ public struct GitHubMarkdownThemePlugin: Plugin {
     }
 
     public func setup(in directory: URL) throws -> Context {
-        let url = URL(string: "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown-\(configuration.theme.rawValue).css")!
-        let cssFilePath = "/css/github-markdown-\(configuration.theme.rawValue).css"
+        let url = URL(string: "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css")!
+        let cssFilePath = "/css/github-markdown.css"
         let stylesheetContents = try String(contentsOf: url)
         try stylesheetContents.write(to: directory.appendingPathComponent(cssFilePath), atomically: false, encoding: .utf8)
 
